@@ -18,13 +18,14 @@
           <div class="logo"><img src="assets/img/impect-logo.jpg" alt=" impect logo"></div>
         </div>
         <div class=" col-9">
-          <nav>
+          <button class="nav-toggle" id="menuToggle">☰ </button>
+          <nav id="mobileNav">
             <ul>
               <li><a href="#">home</a></li>
-              <li><a href="#">about</a></li>
-              <li><a href="#">course</a></li>
+              <li><a href="#about">about</a></li>
+              <li><a href="#services">course</a></li>
               <li><a href="#">blog</a></li>
-              <li><a href="#">contact</a></li>
+              <li><a href="#contact">contact</a></li>
             </ul>
             <ul>
               <li><a href="#" class="btn-primary">sign up</a></li>          
@@ -126,7 +127,7 @@
         <label for="message">Message*</label>
         <textarea id="message" name="message" rows="5" required placeholder="Write your message"></textarea>
       </div>
-      <button type="submit" class="btn-submit">Send Message</button>
+      <button type="submit" class="btn-primary">Send Message</button>
     </form>
   </div>
 </section>
@@ -169,20 +170,28 @@
         <h4>Contact</h4>
         <p>Email: info@impactvtc.org</p>
         <p>Phone: +880 1234 567890</p>
-        <p>Address: Mirpur-2, Dhaka, Bangladesh</p>
+        <p>Address: Mejortila, Sylhet, Bangladesh</p>
         <div class="social-links">
           <a href="https://facebook.com/Impactvtc24" target="_blank">Facebook</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2025 Impact VTC. All Rights Reserved.</p>
+      <p>&copy; 2025 Impact VTC. All Rights Reserved. <a href="https://github.com/devsajed"  target="_blank">Design By Sajed</a></p>
     </div>
   </div>
 </footer>
 <!-- Footer area  -->
 
- 
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileNav = document.getElementById('mobileNav');
+
+  menuToggle.addEventListener('click', () => {
+    mobileNav.classList.toggle('active');
+  });
+</script>
+
 </body>
 
 </html>
